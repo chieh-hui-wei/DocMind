@@ -1,0 +1,98 @@
+/* DocMind — Global Styles
+   Aesthetic: Refined editorial dark. Think archival intelligence meets modern terminal.
+   Fonts: DM Serif Display (headings) + DM Mono (code/accents) + DM Sans (body)
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Palette */
+  --ink: #0d0f12;
+  --ink-2: #13171c;
+  --ink-3: #1c2128;
+  --border: #2a3140;
+  --border-light: #3a4555;
+  --muted: #5a6a7e;
+  --body: #8fa0b4;
+  --loud: #c8d8e8;
+  --white: #f0f4f8;
+
+  --gold: #c9a84c;
+  --gold-dim: #7a5e28;
+  --gold-glow: rgba(201, 168, 76, 0.12);
+  --teal: #4ecdc4;
+  --teal-dim: #2a6b67;
+  --danger: #e05c5c;
+
+  /* Typography */
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'DM Mono', 'Fira Code', monospace;
+
+  /* Spacing */
+  --radius: 8px;
+  --radius-lg: 14px;
+  --radius-xl: 22px;
+}
+
+html, body {
+  height: 100%;
+  background: var(--ink);
+  color: var(--body);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border-light); }
+
+/* Markdown content */
+.markdown-content { color: var(--loud); line-height: 1.8; }
+.markdown-content p { margin-bottom: 0.85em; }
+.markdown-content strong { color: var(--white); font-weight: 600; }
+.markdown-content em { color: var(--gold); font-style: italic; }
+.markdown-content code {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  background: var(--ink-3);
+  color: var(--teal);
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+.markdown-content pre {
+  background: var(--ink-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1em;
+  overflow-x: auto;
+  margin: 0.75em 0;
+}
+.markdown-content pre code { background: none; border: none; padding: 0; color: var(--loud); }
+.markdown-content ul, .markdown-content ol { padding-left: 1.5em; margin-bottom: 0.85em; }
+.markdown-content li { margin-bottom: 0.3em; }
+.markdown-content h1, .markdown-content h2, .markdown-content h3 {
+  color: var(--white);
+  font-family: var(--font-display);
+  margin: 1em 0 0.5em;
+}
+.markdown-content blockquote {
+  border-left: 3px solid var(--gold);
+  margin-left: 0;
+  padding-left: 1em;
+  color: var(--muted);
+  font-style: italic;
+}
