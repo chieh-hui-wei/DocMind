@@ -1,0 +1,35 @@
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+gunicorn==22.0.0
+python-multipart==0.0.9
+pydantic==2.7.1
+pydantic-settings==2.2.1
+
+# LLM & AI
+google-generativeai==0.8.3
+langchain==0.2.1
+# langchain-anthropic==0.1.11
+langchain-community==0.2.1
+langchain-text-splitters==0.2.1
+tiktoken==0.7.0
+
+# Vector DB (Chroma - local, no server needed for demo)
+chromadb==0.5.0
+sentence-transformers==2.7.0
+
+# Document parsing
+pypdf==4.2.0
+python-docx==1.1.2
+unstructured==0.14.4
+
+# HTTP & Utils
+httpx==0.27.0
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-dotenv==1.0.1
+
+# Logging & Monitoring
+loguru==0.7.2
+
+# CORS
+starlette==0.37.2
