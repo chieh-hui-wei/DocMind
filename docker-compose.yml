@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./docmind-backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./docmind-backend/chroma_db:/app/chroma_db
+      - ./docmind-backend/logs:/app/logs
+    env_file:
+      - ./docmind-backend/.env
+    ports:
+      - "8000:8000"
+    restart: always
+
+  frontend:
+    build:
+      context: ./docmind-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5174:80"
+    depends_on:
+      - backend
+    restart: always

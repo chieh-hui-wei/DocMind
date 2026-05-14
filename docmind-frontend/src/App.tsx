@@ -19,7 +19,6 @@ export default function App() {
   const { messages, thinking, sendMessage, clearChat } = useChat()
   const [question, setQuestion] = useState('')
   const [selectedDoc, setSelectedDoc] = useState<Document | null>(null)
-  const [docMenuOpen, setDocMenuOpen] = useState(false)
   const [activeSource, setActiveSource] = useState<number | null>(null)
   const bottomRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
