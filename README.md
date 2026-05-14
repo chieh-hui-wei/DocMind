@@ -39,14 +39,29 @@ Utils        (LLM client, embedding client)
 | | Backend | Frontend |
 |---|---|---|
 | **Framework** | FastAPI | React 18 + TypeScript |
-| **LLM** | Anthropic Claude | — |
+| **LLM** | Google Gemini | — |
 | **Embeddings** | sentence-transformers | — |
 | **Vector DB** | ChromaDB (local) | — |
 | **Doc Parsing** | pypdf, python-docx | — |
 | **HTTP** | httpx, axios | axios |
 | **Build** | uvicorn/gunicorn | Vite |
 
-## Quick Start
+## Quick Start (Docker - Recommended)
+
+```bash
+# 1. Configure backend
+cd docmind-backend
+cp .env.example .env
+# Add your GOOGLE_API_KEY to .env
+
+# 2. Run everything from root
+cd ..
+docker-compose up -d --build
+# Frontend → http://localhost:5174
+# Backend Docs → http://localhost:8000/docs
+```
+
+## Manual Setup
 
 ### 1. Backend
 
@@ -54,7 +69,7 @@ Utils        (LLM client, embedding client)
 cd docmind-backend
 pip install -r requirements.txt
 cp .env.example .env
-# Add your ANTHROPIC_API_KEY to .env
+# Add your GOOGLE_API_KEY to .env
 uvicorn main:app --reload --port 8000
 # Docs → http://localhost:8000/docs
 ```

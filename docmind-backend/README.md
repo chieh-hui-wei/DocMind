@@ -38,6 +38,7 @@ src/
 
 ## Quick Start
 
+### Manual Setup
 ```bash
 # 1. Clone and install
 pip install -r requirements.txt
@@ -49,6 +50,12 @@ cp .env.example .env
 
 # 3. Run
 uvicorn main:app --reload --port 8000
+```
+
+### Docker Setup
+```bash
+docker build -t docmind-backend .
+docker run -p 8000:8000 --env-file .env docmind-backend
 ```
 
 ## API Endpoints

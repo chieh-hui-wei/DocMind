@@ -30,6 +30,7 @@ src/
 
 ## Quick Start
 
+### Manual Setup
 ```bash
 npm install
 npm run dev
@@ -37,6 +38,13 @@ npm run dev
 ```
 
 The Vite dev server proxies `/api/*` to `http://localhost:8000`, so no CORS issues during development.
+
+### Docker Setup (Production build)
+```bash
+docker build -t docmind-frontend .
+docker run -p 5174:80 docmind-frontend
+# → http://localhost:5174
+```
 
 ## Features
 
