@@ -100,15 +100,3 @@ Follows the project's existing Controller→Service→Repository pattern — kee
 **Why FastAPI?** 
 
 Async-native, auto-generated OpenAPI docs, Pydantic validation — ideal for LLM APIs with potentially long response times.
-
-## Skills Demonstrated
-
-- ✅ FastAPI production patterns (middleware, exception handlers, lifespan)
-- ✅ RAG system design (chunking, embedding, retrieval, prompt construction)
-- ✅ Gemini API integration
-- ✅ Vector database operations (ChromaDB)
-- ✅ Document parsing pipeline (PDF, DOCX, TXT, MD)
-- ✅ Layered architecture (Controller → Service → Repository)
-- ✅ React + TypeScript frontend with custom hooks
-- ✅ Pydantic v2 data validation
-- ✅ Environment-based configuration
